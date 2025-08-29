@@ -58,10 +58,8 @@ export const useIssueActions = () => {
     try {
       const response = await issueService.createIssue(issueData);
       enqueueSnackbar('Issue created successfully', { variant: "success" });
-      return response;
     } catch (error) {
       enqueueSnackbar(getAxiosError(error), { variant: "error" });
-      throw error;
     } finally {
       dispatch(hideLoading())
     }

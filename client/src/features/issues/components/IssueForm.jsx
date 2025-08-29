@@ -12,7 +12,7 @@ export const IssueForm = ({ issue, onSubmit, onCancel, loading = false }) => {
     priority: 'medium',
     type: 'task',
     project: '',
-    assignee: '',
+    // assignee: '',
     dueDate: '',
     labels: ''
   });
@@ -26,7 +26,7 @@ export const IssueForm = ({ issue, onSubmit, onCancel, loading = false }) => {
         priority: issue.priority || 'medium',
         type: issue.type || 'task',
         project: issue.project || '',
-        assignee: issue.assignee || '',
+        // assignee: issue.assignee || '',
         dueDate: issue.dueDate ? new Date(issue.dueDate).toISOString().split('T')[0] : '',
         labels: issue.labels ? issue.labels.join(', ') : ''
       });
@@ -43,7 +43,7 @@ export const IssueForm = ({ issue, onSubmit, onCancel, loading = false }) => {
       priority: formData.priority,
       type: formData.type,
       project: formData.project,
-      assignee: formData.assignee || undefined,
+      // assignee: formData.assignee || undefined,
       dueDate: formData.dueDate || undefined,
       labels: formData.labels.split(',').map(label => label.trim()).filter(Boolean)
     };
