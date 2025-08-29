@@ -57,7 +57,7 @@ export const useIssueActions = () => {
     setError(null);
     try {
       const response = await issueService.createIssue(issueData);
-      enqueueSnackbar('Issue created successfully', { variant: "success" });
+      enqueueSnackbar('Issue created successfully.', { variant: "success" });
     } catch (error) {
       enqueueSnackbar(getAxiosError(error), { variant: "error" });
     } finally {
