@@ -47,7 +47,6 @@ export const IssuesPage = () => {
             dispatch(showLoading());
              deleteIssue(id)
               .then(() => {
-                enqueueSnackbar("Successfully deleted issue!", { variant: "success" });
                 refetch();
               })
               .catch((error) => {
