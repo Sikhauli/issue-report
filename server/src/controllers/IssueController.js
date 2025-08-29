@@ -97,7 +97,7 @@ class IssueController {
       
       res.status(200).json({
         success: true,
-        message: 'Issue deleted successfully'
+        message: 'Issue deleted successfully.'
       });
     } catch (error) {
       next(error);
